@@ -1,0 +1,7 @@
+DEPENDENCIES
+  AD
+    path: .
+    metadata: true
+
+GRAPH
+  AD (0.1.0)

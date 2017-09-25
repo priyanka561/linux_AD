@@ -1,0 +1,27 @@
+---
+driver:
+  name: ec2
+  region: us-west-2
+  subnet_id: subnet-9f8a2af9
+  security_group_ids:
+  aws_ssh_key_id: key-pair-561
+tags:
+    Owner: priyanka.elluri
+    Environment: Testing
+    Project: reandeploy
+transport:
+  ssh_key: /home/ubuntu/key-pair-561.pem
+verifier:
+  name: inspec
+platforms:
+  # Ubuntu trusty
+  - name: ubuntu-14.04
+    driver:
+      instance_type: t2.micro
+      tags:
+        Name: pri-ad-ubuntu-1404
+suites:
+  - name: default
+    sudo: true
+    run_list:
+      - recipe[AD::default]
