@@ -24,4 +24,4 @@ suites:
   - name: default
     sudo: true
     run_list:
-      - recipe[AD::default]
+      - recipe[linux_AD::default]
