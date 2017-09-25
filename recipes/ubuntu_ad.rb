@@ -1,4 +1,4 @@
-# cookbook Name:: AD
+# cookbook Name:: linux_AD
 # Recipe:: default
 # Copyright 2017, REANCLOUD
 execute 'install' do
