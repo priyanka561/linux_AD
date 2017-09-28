@@ -1,6 +1,13 @@
 # cookbook Name:: linux_AD
 # Recipe:: default
 # Copyright 2017, REANCLOUD
+# Copyright:: 2017, The Authors, All Rights Reserved.
+if node['resolver']['nameservers'].empty? ||
+   node['resolver']['nameservers'][0].empty?
+  Chef::Log.warn("The ['resolver']['nameservers'] attribute is not set.")
+  Chef::Log.warn('Exiting the recipe...')
+  return
+end
 execute 'install' do
   command 'apt-get install wget -y'
 end
