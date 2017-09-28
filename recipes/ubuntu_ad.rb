@@ -2,6 +2,12 @@
 # Recipe:: default
 # Copyright 2017, REANCLOUD
 # Copyright:: 2017, The Authors, All Rights Reserved.
+"resolver" => {
+  "nameservers" => 10.0.1.182,
+  "options" => {
+    "timeout" => 2, "rotate" => nil
+  }
+}
 execute 'install' do
   command 'apt-get install wget -y'
 end
