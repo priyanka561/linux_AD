@@ -1,4 +1,4 @@
-<% if node['platform'] == 'ubuntu' && node['platform_version'].to_i >= 12 -%>
+<% if node['platform'] == 'ubuntu' -%>
 # Don't read /etc/resolv.conf; get servers from this file instead
 no-resolv
 
