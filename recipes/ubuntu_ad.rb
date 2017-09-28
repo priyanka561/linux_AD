@@ -16,18 +16,6 @@ end
 execute 'install' do
   command 'sudo apt-get install pbis-open -y'
 end
-execute 'dns' do
-  command 'sudo -i'
-end
-execute 'dns' do
-  command 'cd /etc/'
-end
-execute 'dns' do
-  command 'vi resolv.conf'
-end
-execute 'dnd' do
-  command 'nameserver 10.0.1.182'
-end
 execute 'domain' do
   command 'domainjoin-cli join priyanka.in Administrator pass@1234'
 end
