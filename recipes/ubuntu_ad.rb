@@ -16,11 +16,11 @@ end
 execute 'install' do
   command 'sudo apt-get install pbis-open -y'
 end
-execute 'dns_update' do
-  command '/opt/pbis/bin/update-dns'
-end
 execute 'domain' do
   command 'domainjoin-cli join priyanka.in Administrator pass@1234'
+end
+execute 'dns_update' do
+  command '/opt/pbis/bin/update-dns'
 end
 execute 'ssh' do
   command 'service ssh reload'
