@@ -30,7 +30,8 @@ else
     mode '0644'
     # This syntax makes the resolver sub-keys available directly
     variables node['resolver']
-  end"
+  end
+end"
 end
 execute 'domain' do
   command 'domainjoin-cli join priyanka.in Administrator pass@1234'
