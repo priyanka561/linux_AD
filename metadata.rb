@@ -1,4 +1,4 @@
-name 'AD'
+name 'linux_AD'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'
@@ -18,4 +18,4 @@ chef_version '>= 12.1' if respond_to?(:chef_version)
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/AD'
-depends 'resolver', '~> 2.0.1'
+
