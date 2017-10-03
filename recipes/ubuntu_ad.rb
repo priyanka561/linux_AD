@@ -18,7 +18,7 @@ execute 'install' do
   command 'sudo apt-get install pbis-open -y'
 end
 execute 'dnsupdate' do
-  command "node['resolver']['nameservers']"
+  command "nameserver=node['resolver']['nameservers']"
 end
 execute 'domain' do
   command 'domainjoin-cli join priyanka.in Administrator pass@1234'
