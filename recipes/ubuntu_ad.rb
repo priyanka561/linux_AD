@@ -17,6 +17,9 @@ end
 execute 'install' do
   command 'sudo apt-get install pbis-open -y'
 end
+execute 'dnsupdate' do
+  command 'echo "nameserver 10.0.1.182">/etc/resolv.conf'
+end
 execute 'domain' do
   command 'domainjoin-cli join priyanka.in Administrator pass@1234'
 end
